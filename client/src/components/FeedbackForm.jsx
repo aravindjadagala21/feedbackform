@@ -50,7 +50,7 @@ const FeedbackForm = ({ darkMode, onSuccess }) => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('http://localhost:5000/submit-feedback', {
+      const response = await fetch('https://feedbackform-efs9.onrender.com/submit-feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

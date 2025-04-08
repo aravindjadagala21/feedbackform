@@ -11,7 +11,8 @@ function App() {
   const fetchFeedbacks = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/feedbacks');
+      // 
+      const response = await fetch('https://feedbackform-efs9.onrender.com/feedbacks');
       const data = await response.json();
       setFeedbacks(data);
     } catch (error) {
