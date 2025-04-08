@@ -18,7 +18,7 @@ const FeedbackForm = ({ darkMode, onSuccess }) => {
       [name]: value
     }));
     
-    // Clear error when user types
+   
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -62,7 +62,7 @@ const FeedbackForm = ({ darkMode, onSuccess }) => {
         throw new Error('Submission failed');
       }
       
-      // Reset form on success
+      
       setFormData({
         name: '',
         email: '',
@@ -71,7 +71,7 @@ const FeedbackForm = ({ darkMode, onSuccess }) => {
       setSubmitSuccess(true);
       onSuccess && onSuccess();
       
-      // Hide success message after 3 seconds
+
       setTimeout(() => setSubmitSuccess(false), 3000);
     } catch (error) {
       console.error('Error submitting feedback:', error);
